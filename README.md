@@ -20,7 +20,7 @@ GLM are well credentialed; Space Bunny and Big Pickle are anonymous models avail
 
 The sole, naive prompt for each review in this first exercise was the following
 
-"You are a systems developer in the root of the git repository for the codebase of the moOde audio player. The codebase consists mainly of php, python, bash, and javascript moduels. The system architecture is described in the companion document ../docs/moode_application.md. Review the codebase for errors and prepare a report of the errors and of a remediation plan and save it in markdown format in the current directory. Do not modify any existing code."
+"You are a systems developer in the root of the git repository for the codebase of the moOde audio player. The codebase consists mainly of php, python, bash, and javascript modules. The system architecture is described in the companion document ../docs/moode_application.md. Review the codebase for errors and prepare a report of the errors and of a remediation plan and save it in markdown format in the current directory. Do not modify any existing code."
 
 No attempt was made to improve on this crude prompt, although it is obvious from the running output that improvements can be made.
 A well-worded AGENTS.md would make prompting even simpler.
