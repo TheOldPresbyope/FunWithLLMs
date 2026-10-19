@@ -24,3 +24,8 @@ The sole, naive prompt for each review in this first exercise was the following
 
 No attempt was made to improve on this crude prompt, although it is obvious from the running output that improvements can be made.
 A well-worded AGENTS.md would make prompting even simpler.
+
+## Results
+
+I'm putting the resulting reports in dated subdirectories. They are unmodified except for their filenames, which I've
+edited to indicate the LLM involved.
