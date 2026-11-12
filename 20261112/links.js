@@ -26,17 +26,28 @@ $(document).on('click', 'a', function(event) {
 		}
 
 	    if (!$(this).hasClass('external')) {
-			// Fragment links (#...) and javascript: links are owned by the
-			// component that rendered them (Bootstrap modal/dropdown/tab, the
-			// data-cmd handlers) or by the browser itself. Assigning
-			// location.href here stacks a same-document navigation on top of
-			// that component's own action; iOS 27 / WebKit resolves it as a
-			// full page reload, which closed the Configure modal and the
+			// Fragment links (#...) are owned by the component that rendered
+			// them (Bootstrap modal/dropdown/tab, the data-cmd handlers).
+			// Assigning location.href here stacks a same-document navigation on
+			// top of that component's own action; iOS 27 / WebKit resolves it
+			// as a full page reload, which closed the Configure modal and the
 			// Library menu immediately after they opened (issue #844).
 			// Just keep the hash out of the URL and let the owner do its job.
-			if (href == '' || href.charAt(0) == '#' || href.indexOf('javascript:') === 0) {
-				//debugLog('links.js: link not modified, owned by component or browser: ' + href);
+			if (href == '' || href.charAt(0) == '#') {
+				//debugLog('links.js: link not modified, owned by component: ' + href);
 				event.preventDefault();
+				return;
+			}
+
+			// javascript: links (Dashboard, Audio info, System info, Refresh,
+			// reconnect) are run by the browser as the anchor's default action.
+			// Do NOT preventDefault() here: that cancels the default action and
+			// the link does nothing. Do NOT assign location.href to it either:
+			// re-entering a javascript: URL through location loses the trusted
+			// activation and reports errors as hostless "Script error.".
+			// Leave the click completely alone.
+			if (href.indexOf('javascript:') === 0) {
+				//debugLog('links.js: javascript: link, left to browser: ' + href);
 				return;
 			}
 
