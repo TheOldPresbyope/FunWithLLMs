@@ -12,11 +12,12 @@ cloned repo, one for each of the LLMs used (such as moode.deepseek). I have not 
 such as AGENTS.md or CLAUDE.md. I simply change to the root directory of the chosen copy, invoke opencode, and select the
 appropriate LLM from the list offered by the /models command.
 
-## LLMs
+### LLMs
 
 The LLMs used in this first exercise were Space Bunny, DeepSeek V4.1 Flash, GLM-5.3-Flash, Big Pickle. DeepSeek and
 GLM are well credentialed; Space Bunny and Big Pickle are anonymous models available for limited amounts of time.
-## opencode Prompt
+
+### opencode Prompt
 
 The sole, naive prompt for each review in this first exercise was the following
 
@@ -25,7 +26,11 @@ The sole, naive prompt for each review in this first exercise was the following
 No attempt was made to improve on this crude prompt, although it is obvious from the running output that improvements can be made.
 A well-worded AGENTS.md would make prompting even simpler.
 
-## Results
+### Results
 
 I'm putting the resulting reports in dated subdirectories. They are unmodified except for their filenames, which I've
 edited to indicate the LLM involved.
+
+## Second Exercise
+
+The 20261112 subdirectory contains my exploration of the iOS 27 issue with the moOde webUI.
